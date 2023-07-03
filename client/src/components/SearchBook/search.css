@@ -1,0 +1,101 @@
+.search-container {
+  padding: 0 20px;
+}
+.search-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.site-logo {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  text-align: start;
+  line-height: 1;
+}
+
+.logo h2 {
+  font-size: 26px;
+}
+
+.book-icon {
+  background-color: blue;
+  color: white;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.search-book {
+  margin-top: 10px;
+  width: 100%;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: relative;
+}
+
+.icon-search {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.search-book input[type="text"] {
+  padding-left: 30px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  height: 40px;
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+}
+
+.search-book input[type="text"]::placeholder {
+  color: #888;
+}
+
+.search-book input[type="text"]:focus {
+  border: 1.5px solid #888;
+}
+
+.pagination{
+  max-width: 400px;
+  margin: 15px auto 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 4px;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:hover {
+  background-color: #ddd;
+}
+
+.pagination-icon {
+  margin-right: 0.5rem;
+}
