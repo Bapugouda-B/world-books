@@ -37,10 +37,7 @@ export default function Booklist({ books }) {
       setFavoriteBooks([...favoriteBooks, newBook]);
       // Make the API call to add the book to favorites
       axios
-        .post(
-          "https://book-api-omega.vercel.app/api/books/favoritebooks",
-          newBook
-        )
+        .post("https://book-api-omega.vercel.app/favoritebooks", newBook)
         .then((response) => {
           toast.success("Book added to favorites!", {
             autoClose: 1000,
@@ -73,7 +70,6 @@ export default function Booklist({ books }) {
           let thumbnail =
             item.volumeInfo.imageLinks &&
             item.volumeInfo.imageLinks.smallThumbnail;
-
           // Update the thumbnail URL to use HTTPS
           if (thumbnail && thumbnail.startsWith("http://")) {
             thumbnail = thumbnail.replace("http://", "https://");

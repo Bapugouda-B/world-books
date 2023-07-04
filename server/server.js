@@ -3,12 +3,14 @@ const axios = require("axios");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const booksRoute = require("./routes/BooksRoute.js");
+require("dotenv").config();
 
 const app = express();
 
 app.use(
   cors({
-    origin: "https://bapu-books-site.vercel.app"
+    origin: "https://bapu-books-site.vercel.app",
+    credentials:true
   })
 );
 
@@ -27,7 +29,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // Routes
-app.use("/api/books", booksRoute);
+app.use("/", booksRoute);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
