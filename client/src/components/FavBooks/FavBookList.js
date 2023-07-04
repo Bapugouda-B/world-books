@@ -15,7 +15,7 @@ export default function Favbooklist() {
 
   const fetchFavoriteBooks = () => {
     axios
-      .get("/api/books/favoritebooks")
+      .get("https://book-api-omega.vercel.app//api/books/favoritebooks")
       .then((response) => {
         const booksWithEdit = response.data.map((book) => ({
           ...book,
@@ -31,7 +31,7 @@ export default function Favbooklist() {
 
   const handleRemoveFavorite = (id) => {
     axios
-      .delete(`/api/books/favoritebooks/${id}`)
+      .delete(`https://book-api-omega.vercel.app//api/books/favoritebooks/${id}`)
       .then((response) => {
         // Book successfully removed from the server, update the favorite books state
         const updatedBooks = favoriteBooks.filter((book) => book._id !== id);
@@ -73,7 +73,7 @@ export default function Favbooklist() {
   
     // Send the updated fields to the server
     axios
-      .put(`/api/books/favoritebooks/${id}`, { title, author, amount })
+      .put(`https://book-api-omega.vercel.app//api/books/favoritebooks/${id}`, { title, author, amount })
       .then((response) => {
         // Book successfully updated on the server, update the favorite books state
         const updatedBooks = [...favoriteBooks];

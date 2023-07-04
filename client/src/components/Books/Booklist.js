@@ -37,7 +37,7 @@ export default function Booklist({ books }) {
       setFavoriteBooks([...favoriteBooks, newBook]);
       // Make the API call to add the book to favorites
       axios
-        .post("/api/books/favoritebooks", newBook)
+        .post("https://book-api-omega.vercel.app/api/books/favoritebooks", newBook)
         .then((response) => {
           toast.success("Book added to favorites!", {
             autoClose: 1000,
