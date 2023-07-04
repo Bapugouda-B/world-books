@@ -156,7 +156,7 @@ export default function Favbooklist() {
                     <p>{book.author}</p>
                   </div>
                   <div>
-                    <small>₹{book.amount}</small>
+                    {book.amount ? <small>₹{book.amount}</small> : <small>Free</small>}
                   </div>
                   <div
                     className="addfav-icon"
