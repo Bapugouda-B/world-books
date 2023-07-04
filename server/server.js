@@ -6,21 +6,17 @@ const booksRoute = require("./routes/BooksRoute.js");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: ["https://world-books.vercel.app"],
-
-    methods: ["POST", "PUT", "DELETE", "GET"],
-    credentials: true,
-  })
-);
+app.use(cors({
+  origin: ['https://bapu-books-site.vercel.app'],
+  methods:['POST', 'PUT', 'DELETE', 'GET'],
+  credentials:true,
+}));
 
 // Middleware
 app.use(express.json());
 
 //connect to mongodb server
-const url =
-  "mongodb+srv://bapu:6FPOIjFtiEFcG7rh@books.1hmytti.mongodb.net/?retryWrites=true&w=majority";
+const url = "mongodb+srv://bapu:6FPOIjFtiEFcG7rh@books.1hmytti.mongodb.net/?retryWrites=true&w=majority";
 mongoose
   .connect(url, {
     useNewUrlParser: true,
